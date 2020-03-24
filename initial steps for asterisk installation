@@ -1,0 +1,21 @@
+NOTE - Install asterisk , libpri , dahdi , wanpipe etc inside '/usr/src/'
+
+Step 1 - Goto 'asterisk.org' and click on 'download' and then 'all asterisk versions'.Right click on 'certified asterisk LTS version' button and copy link.
+
+Step 2 - Open terminal and login as 'root' using 'sudo -s' and password of your system.
+
+Step 3 - 'wget and paste the link' and press enter.
+
+Step 4 - Do 'apt-get install build-essential wget libssl-dev libncurses5-dev libnewt-dev linux-headers-$(uname -r) libsqlite3-dev uuid-dev'    //This will install libraries and other asterisk requirements.
+
+Step 5 - Unpack asterisk downloaded file 'tar zxvf asterisk-version' .
+
+Step 6 - Goto asterisk root directory and do './configure'     //If a big asterisk symbol comes then asterisk gets installed successfully else some library is missing.
+
+Step 7 - Then 'make menuconfig'    //Window will be displayed for modules of asterisk.
+
+Step 8 - Then 'make'  //This compiles asterisk modules
+
+Step 9 - Then 'make install'  //This will install asterisk
+
+Step 10 - 'make samples' //This creates sample configuration files inside /etc/asterisk/
